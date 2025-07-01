@@ -1,0 +1,9 @@
+```mermaid
+flowchart TB
+    Page[Notes Page Loads] --> Browser[Browser Downloads JavaScript Code]
+    Browser --> JS[JavaScript Executes in Browser]
+    JS -->|Fetches JSON notes| Server[Server Sends Raw JSON Data]
+    Server --> JS
+    JS --> DOM[Generate HTML via DOM API]
+    DOM --> PageUpdate[Notes Rendered on the Page]
+```

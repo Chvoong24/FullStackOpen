@@ -1,0 +1,14 @@
+```mermaid
+flowchart TB
+    Browser -->|User submits new note| Server
+    Server -->|Responds with HTTP 302 Redirect| Browser
+    Browser -->|Follows redirect to /notes| Server
+
+    
+    subgraph "Browser Renders Page & Fetches Assets"
+        direction TB
+        Browser -->|GET /main.css| Server
+        Browser -->|GET /main.js| Server
+        Browser -->|GET /data.json| Server
+    end
+```
